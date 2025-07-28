@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoga Bliss | Yoga Instructor</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --main-color: #007b77;
+      --light-gray: #f5f5f5;
+      --dark: #222;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: white;
+    }
+
+    header {
+      background: url('1.jpeg');
+      height: 100vh;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .overlay {
+      background: rgba(0,0,0,0.5);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      padding: 0 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .hero-content a {
+      padding: 12px 30px;
+      background: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .hero-content a:hover {
+      background: #005f57;
+    }
+
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 1rem;
+    }
+
+    nav ul li {
+      margin: 0 1.2rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: var(--main-color);
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.4rem;
+      color: var(--main-color);
+      margin-bottom: 20px;
+    }
+
+    .about img {
+      max-width: 400px;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 30px;
+    }
+
+    .benefits .box {
+      flex: 1 1 200px;
+      background: var(--light-gray);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .benefits i {
+      font-size: 2rem;
+      color: var(--main-color);
+      margin-bottom: 10px;
+    }
+
+    .contact input, .contact textarea {
+      width: 80%;
+      max-width: 500px;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact button {
+      background: var(--main-color);
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact button:hover {
+      background: #005f57;
+    }
+
+    .confirmation {
+      margin-top: 15px;
+      color: green;
+      font-weight: 500;
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    footer .social i {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.2rem;
+      }
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Yoga Bliss</h1>
+      <p>Inner Peace. Outer Strength. Balanced Living.</p>
+      <a href="#contact">Join Now</a>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Yoga Bliss</h2>
+    <p>Welcome to Yoga Bliss – your space for mental clarity, body flexibility, and spiritual alignment. Whether you're new or experienced, we offer a nurturing environment to grow through Hatha, Vinyasa, and Meditation sessions guided by certified professionals.</p>
+    <img src="2.jpg" alt="Yoga Instructor">
+  </section>
+
+  <!-- Benefits Section -->
+  <section id="benefits">
+    <h2>Why Yoga Bliss?</h2>
+    <div class="benefits">
+      <div class="box">
+        <i class="fas fa-heartbeat"></i>
+        <h4>Healthy Body</h4>
+        <p>Yoga enhances flexibility, circulation, and core strength.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-brain"></i>
+        <h4>Peaceful Mind</h4>
+        <p>Relax your nervous system and reduce daily stress.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-users"></i>
+        <h4>Supportive Community</h4>
+        <p>Grow with like-minded people and find lasting connections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+      <div class="confirmation" id="confirmation"></div>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+  <p>&copy; 2025 Yoga Bliss. All rights reserved.</p>
+  <div class="social">
+    <a href="https://www.instagram.com/samarth_thite_1010/"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+  </div>
+</footer>
+
+
+  <!-- JS -->
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById("confirmation").innerText = "Thank you! Yoga Bliss will reach out to you soon.";
+    }
+  </script>
+</body>
+</html>
